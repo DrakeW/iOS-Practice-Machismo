@@ -3,4 +3,4 @@ Machismo
 
 Introduction
 ---
-Assignment 1 of standord IOS classes. LOGO CHANGED TO GOLDEN BEARS + BACKGROUND CHANGED TO GOLD
+Assignment 1 of stanfurd IOS classes. LOGO CHANGED TO GOLDEN BEARS + BACKGROUND CHANGED TO GOLD
