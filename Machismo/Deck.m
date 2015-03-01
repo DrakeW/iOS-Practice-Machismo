@@ -12,7 +12,7 @@
 @interface Deck()
 
 //array of cards
-@property (strong, nonatomic) NSMutableArray *cards;
+@property (nonatomic) NSMutableArray *cards;
 
 @end
 
@@ -30,9 +30,11 @@
 - (void) addCard:(Card *)newCard atTop:(BOOL)atTop
 {
     if (atTop) {
-        [_cards insertObject:newCard atIndex:0];
+        [self.cards insertObject:newCard atIndex:0];
     } else {
-        [_cards addObject:newCard];
+//        NSLog(@"%@",[newCard contents]);
+        [self.cards addObject:newCard];
+//        NSLog(@"%d", [_cards count]);
     }
 }
 
@@ -44,11 +46,15 @@
 - (Card *)drawRandomCard
 {
     Card *randomCard = nil;
+    NSLog(@"number of cards: %d", [self.cards count]);
+    
     if ([self.cards count]) {
         int randomIndex = arc4random() % [self.cards count];
         randomCard = self.cards[randomIndex];
         [self.cards removeObjectAtIndex:randomIndex];
     }
+    
+//    NSLog(@"randm card: %@",randomCard.contents);
     return randomCard;
 }
 

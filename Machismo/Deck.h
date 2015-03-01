@@ -15,10 +15,14 @@
 @interface Deck : NSObject
 
 @property (nonatomic, strong) NSNumber *numOfCards;
+
+
 - (void) addCard:(Card *)newCard atTop:(BOOL) atTop;
 - (void) addCard:(Card *)newCard;
 
 - (Card *) drawRandomCard;
+
+
 
 @end
 

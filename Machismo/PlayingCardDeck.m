@@ -28,10 +28,11 @@
                 card.rank = rank;
                 card.suit = suit;
                 [self addCard:card];
+                
             }
         }
     }
-    
+//    NSLog(@"%d",[[self cards] count]);
     return self;
 }
 

@@ -54,7 +54,7 @@
 
 + (NSInteger) maxRank
 {
-    return [[PlayingCard rankString] count]-1;
+    return [[PlayingCard rankString] count];
 }
 
 - (void) setRank:(NSUInteger)rank
@@ -63,6 +63,7 @@
         _rank = rank;
     }
 }
+
 
 
 
