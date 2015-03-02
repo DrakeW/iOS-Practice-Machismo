@@ -27,6 +27,8 @@
                 PlayingCard *card = [[PlayingCard alloc] init];
                 card.rank = rank;
                 card.suit = suit;
+                card.chosen = NO;
+                card.matched = NO;
                 [self addCard:card];
                 
             }

@@ -46,8 +46,6 @@
 - (Card *)drawRandomCard
 {
     Card *randomCard = nil;
-    NSLog(@"number of cards: %d", [self.cards count]);
-    
     if ([self.cards count]) {
         int randomIndex = arc4random() % [self.cards count];
         randomCard = self.cards[randomIndex];

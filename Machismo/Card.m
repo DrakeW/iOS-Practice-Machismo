@@ -15,7 +15,17 @@
 
 @implementation Card : NSObject
 
+@synthesize chosen = _chosen;
+@synthesize matched = _matched;
 
-
+- (int)match:(NSArray *)otherCards
+{
+    int score = 0;
+    
+    if (self.contents == [otherCards[0] contents]) {
+        score = 1;
+    }
+    return score;
+}
 
 @end
