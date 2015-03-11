@@ -21,6 +21,8 @@
 
 - (Card *) cardAtIndex: (NSUInteger) index;
 
+- (CardMatchingGame*) restartGameWithCardCount: (NSUInteger) count usingDeck:(Deck*) deck;
+
 @property (nonatomic, readonly) int score;
 
 @end

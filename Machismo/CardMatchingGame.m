@@ -24,7 +24,6 @@
     return _cards;
 }
 
-
 - (instancetype) initWithCardCount:(NSUInteger)count usingDeck:(Deck *)deck
 {
     self = [super init];
@@ -40,7 +39,16 @@
             }
         }
     }
+    NSLog(@"%@",self);
     return self;
+}
+
+- (CardMatchingGame*) restartGameWithCardCount:(NSUInteger)count usingDeck:(Deck *)deck
+{
+    self.cards = [[NSMutableArray alloc] init];
+    CardMatchingGame* newGame = [self initWithCardCount:count usingDeck:deck];
+    newGame.score = 0;
+    return newGame;
 }
 
 static const int MISMATCH_PENALTY = 2;
@@ -80,6 +88,15 @@ static const int COST_TO_CHOOSE = 1;
 - (Card *) cardAtIndex:(NSUInteger)index
 {
     return index < [self.cards count] ? [self.cards objectAtIndex:index] : nil;
+}
+
+- (NSString *) description
+{
+    NSString *description = @"";
+    for (Card *card in self.cards) {
+        description = [description stringByAppendingString:[card contents]];
+    }
+    return description;
 }
 
 @end

@@ -43,6 +43,12 @@
     [self updateUI];
 }
 
+- (IBAction)restartGameButton {
+    self.game = [self.game restartGameWithCardCount:self.cardButtons.count
+                                          usingDeck:[self createDeck]];
+    [self updateUI];
+}
+
 - (void) updateUI
 {
     for (UIButton *cardButton in self.cardButtons) {
